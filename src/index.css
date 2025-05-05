@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#root {
+  background-color: #F5F5F5;
+}
+
+nav {
+  background-color: #ECF0F1;
+  width: 100%;
+}
+
+#cards {
+  gap: 100px;
+  margin-top: 69.5px;
+  margin-bottom: 69.5px;
+}
+
+#card {
+  min-width: 25%;
+  background-color: #ECF0F1;
+}
+
+#card-relatorios {
+  min-width: 84%;
+  background-color: #ECF0F1;
+}
+
+button {
+  background-color: #27AE60;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+div h5 {
+  color: #F39C12;
+}
+
+footer {
+  background-color: #ECF0F1;
+}
+
+#icone-voltar {
+  &:hover {
+    opacity: 0.8;
+  }
+}
