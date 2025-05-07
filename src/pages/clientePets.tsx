@@ -6,7 +6,7 @@ export default class ClientePets extends Component {
     render() {
         return (
             <>
-                <BarraPrincipal></BarraPrincipal>
+                <BarraPrincipal rota="/clientes"></BarraPrincipal>
                 <div>
                     
                 </div>

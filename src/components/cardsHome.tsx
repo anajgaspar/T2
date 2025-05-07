@@ -19,7 +19,7 @@ export default class CardsHome extends Component<props> {
                     <div className="flex-column">
                         <h5>{ this.props.titulo }</h5>
                         <p>{ this.props.descricao }</p>
-                        <Botao link={this.props.rota}></Botao>
+                        <Botao link={this.props.rota} conteudo="Acessar"></Botao>
                     </div>
                 </div>
             </div>

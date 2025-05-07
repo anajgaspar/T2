@@ -6,7 +6,7 @@ export default class Rankings extends Component {
     render() {
         return (
             <>
-                <BarraPrincipal></BarraPrincipal>
+                <BarraPrincipal rota="/"></BarraPrincipal>
                 <div>
                     
                 </div>
