@@ -1,0 +1,40 @@
+nav {
+  background-color: #ECF0F1;
+  width: 100%;
+}
+
+#icone-voltar {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+#titulo {
+  margin-top: 58px;
+  color: #F39C12;
+  font-weight: bold;
+}
+
+.list-group li:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+
+.list-group li:nth-child(even) {
+  background-color: #cfcfcf;
+}
+
+#botao {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: #27AE60;
+  padding: 3px 6px;
+  text-decoration: none;
+  color: black;
+  font-size: small;
+  font-weight: 500;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

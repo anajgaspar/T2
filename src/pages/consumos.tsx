@@ -1,8 +1,8 @@
 import { Component } from "react";
-import BarraPrincipal from "../components/barraPrincipal";
-import Footer from "../components/footer";
+import BarraPrincipal from "../components/navbarCompleta";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "../styles/consumo.css"
 
 export default class Consumos extends Component {
     render() {
@@ -24,7 +24,7 @@ export default class Consumos extends Component {
                             </select>
                         </div>
                         <div className="d-flex justify-content-between mt-5 gap-5">
-                            <div className="d-flex flex-wrap gap-4">
+                            <div className="d-flex flex-wrap gap-4 w-50">
                                 <div className="mb-3 form-check flex-wrap">
                                     <input type="checkbox" className="form-check-input" />
                                     Ração Premium Cães 10kg
@@ -66,7 +66,7 @@ export default class Consumos extends Component {
                                     Petisco Natural 300g
                                 </div>
                             </div>
-                            <div className="d-flex flex-wrap gap-4">
+                            <div className="d-flex flex-wrap gap-4 w-50">
                                 <div className="mb-3 form-check flex-wrap">
                                     <input type="checkbox" className="form-check-input" />
                                     Banho e Tosa
@@ -112,7 +112,6 @@ export default class Consumos extends Component {
                         <button type="submit" className="btn mt-5">Registrar</button>
                     </form>
                 </div>
-                <Footer></Footer>
             </>
         )
     }

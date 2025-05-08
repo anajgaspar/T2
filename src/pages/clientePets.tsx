@@ -1,6 +1,6 @@
 import { Component } from "react";
-import BarraPrincipal from "../components/barraPrincipal";
-import Footer from "../components/footer";
+import BarraPrincipal from "../components/navbarCompleta";
+import "../styles/clientePets.css"
 
 export default class ClientePets extends Component {
     render() {
@@ -10,7 +10,6 @@ export default class ClientePets extends Component {
                 <div>
                     
                 </div>
-                <Footer></Footer>
             </>
         )
     }

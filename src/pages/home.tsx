@@ -1,7 +1,7 @@
 import { Component } from "react";
-import BarraSecundaria from "../components/barraSecundaria";
+import BarraSecundaria from "../components/navbarLogo";
 import CardsHome from "../components/cardsHome";
-import Footer from "../components/footer";
+import "../styles/home.css"
 
 export default class Home extends Component {
     render() {
@@ -29,7 +29,6 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer></Footer>
             </>
         )
     }

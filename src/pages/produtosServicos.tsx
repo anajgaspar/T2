@@ -1,10 +1,11 @@
 import { Component } from "react";
-import BarraPrincipal from "../components/barraPrincipal";
-import Footer from "../components/footer";
+import BarraPrincipal from "../components/navbarCompleta";
 import CardsListagens from "../components/cardsListagens";
 import Botao from "../components/botao";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "../styles/produtosServicos.css"
+
 export default class Produtos extends Component {
     render() {
         return (
@@ -38,7 +39,6 @@ export default class Produtos extends Component {
                         <CardsListagens nome="Petisco Natural 300g" valor={32} />
                     </ul>
                 </div>
-                <Footer></Footer>
             </>
         )
     }

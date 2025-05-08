@@ -1,0 +1,25 @@
+nav {
+  background-color: #ECF0F1;
+  width: 100%;
+}
+
+#introducao {
+  margin-top: 58px;
+  margin-bottom: 58px;
+  font-weight: bold;
+}
+
+#cards {
+  gap: 100px;
+  margin-bottom: 69.5px;
+}
+
+#card {
+  min-width: 25%;
+  background-color: #ECF0F1;
+}
+
+#card-relatorios {
+  min-width: 84%;
+  background-color: #ECF0F1;
+}

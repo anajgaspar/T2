@@ -1,8 +1,8 @@
 import { Component } from "react";
-import BarraPrincipal from "../components/barraPrincipal";
-import Footer from "../components/footer";
-import CardsListagensCliente from "../components/cardsListagensClientes";
+import BarraPrincipal from "../components/navbarCompleta";
+import CardsListagensCliente from "../components/cardsListagemClientes";
 import Botao from "../components/botao";
+import "../styles/clientes.css"
 
 export default class Clientes extends Component {
     render() {
@@ -27,7 +27,6 @@ export default class Clientes extends Component {
                     <CardsListagensCliente nome="Isadora" cpf="852456789" telefone="912398765" />
                     <CardsListagensCliente nome="Fernando" cpf="147258369" telefone="909876543" />
                 </ul>
-                <Footer></Footer>
             </>
         )
     }
