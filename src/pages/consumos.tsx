@@ -1,5 +1,5 @@
 import { Component } from "react";
-import BarraPrincipal from "../components/navbarCompleta";
+import NavbarCompleta from "../components/NavbarCompleta";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "../styles/consumo.css"
@@ -8,10 +8,10 @@ export default class Consumos extends Component {
     render() {
         return (
             <>
-                <BarraPrincipal rota="/"></BarraPrincipal>
+                <NavbarCompleta rota="/"></NavbarCompleta>
                 <div>
                     <div id="titulo" className="container-md">
-                        <h3>Registrar Consumo</h3>
+                        <h3>Cadastrar Consumo</h3>
                     </div>
                     <form className="container-lg d-flex flex-column gap-2 my-4">
                         <div className="mb-3">
@@ -109,7 +109,7 @@ export default class Consumos extends Component {
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" className="btn mt-5">Registrar</button>
+                        <button type="submit" className="btn mt-5">Cadastrar</button>
                     </form>
                 </div>
             </>

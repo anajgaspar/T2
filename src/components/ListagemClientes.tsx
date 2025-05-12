@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Botao from "./botao";
+import BotaoLink from "./BotaoLink";
 
 type props = {
     nome: string,
@@ -9,7 +9,7 @@ type props = {
     telefone: string
 }
 
-export default class CardsListagensCliente extends Component<props> {
+export default class ListagemClientes extends Component<props> {
     render() {
         return (
             <>
@@ -26,7 +26,7 @@ export default class CardsListagensCliente extends Component<props> {
                         <a href="/">
                             <img className="img-fluid" src="https://img.icons8.com/?size=100&id=82744&format=png&color=000000" alt="update" width={20}></img>
                         </a>
-                        <Botao link="/cliente-pets" conteudo="Ver Pets"></Botao>
+                        <BotaoLink link="/cliente-pets" conteudo="Ver Pets"></BotaoLink>
                     </div>
                 </li>
             </>

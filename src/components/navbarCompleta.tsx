@@ -6,11 +6,11 @@ type props = {
     rota: string
 }
 
-export default class BarraPrincipal extends Component<props> {
+export default class NavbarCompleta extends Component<props> {
     render() {
         return (
             <>
-                <nav className="navbar sticky-top shadow-sm">
+                <nav className="navbar sticky-top">
                     <div className="container-fluid justify-content-between">
                         <a className="navbar-brand" href={ this.props.rota }>
                             <img id="icone-voltar" className="img-fluid" src="https://img.icons8.com/?size=100&id=89782&format=png&color=F39C12" alt="icone-voltar" width={45}></img>

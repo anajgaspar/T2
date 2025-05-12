@@ -1,13 +1,13 @@
 import { Component } from "react";
-import BarraPrincipal from "../components/navbarCompleta";
-import CardsListagens from "../components/cardsListagens";
+import NavbarCompleta from "../components/NavbarCompleta";
+import ListagemProdutosServicos from "../components/ListagemProdutosServicos";
 import "../styles/relatorios.css"
 
-export default class Rankings extends Component {
+export default class Relatorios extends Component {
     render() {
         return (
             <>
-                <BarraPrincipal rota="/"></BarraPrincipal>
+                <NavbarCompleta rota="/"></NavbarCompleta>
                 <div>
                     <div id="titulo" className="container-md">
                         <h3>Relatórios</h3>
@@ -23,11 +23,11 @@ export default class Rankings extends Component {
                             </select>
                         </div>
                         <ul className="list-group container-lg d-flex flex-column gap-2 my-4">
-                            <CardsListagens nome="Ração Premium Cães 10kg" valor={180} />
-                            <CardsListagens nome="Areia Higiênica 4kg" valor={35} />
-                            <CardsListagens nome="Shampoo Antipulgas" valor={45} />
-                            <CardsListagens nome="Brinquedo Mordedor" valor={25} />
-                            <CardsListagens nome="Coleira Antipulgas" valor={60} />
+                            <ListagemProdutosServicos nome="Ração Premium Cães 10kg" valor={180} />
+                            <ListagemProdutosServicos nome="Areia Higiênica 4kg" valor={35} />
+                            <ListagemProdutosServicos nome="Shampoo Antipulgas" valor={45} />
+                            <ListagemProdutosServicos nome="Brinquedo Mordedor" valor={25} />
+                            <ListagemProdutosServicos nome="Coleira Antipulgas" valor={60} />
                         </ul>
                     </form>
                 </div>

@@ -7,7 +7,7 @@ type props = {
     conteudo: string
 }
 
-export default class Botao extends Component<props> {
+export default class BotaoLink extends Component<props> {
     render() {
         return (
             <>

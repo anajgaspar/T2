@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Botao from "./botao";
+import BotaoLink from "./BotaoLink";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
@@ -19,7 +19,7 @@ export default class CardsHome extends Component<props> {
                     <div className="flex-column">
                         <h5>{ this.props.titulo }</h5>
                         <p>{ this.props.descricao }</p>
-                        <Botao link={this.props.rota} conteudo="Acessar"></Botao>
+                        <BotaoLink link={this.props.rota} conteudo="Acessar"></BotaoLink>
                     </div>
                 </div>
             </div>

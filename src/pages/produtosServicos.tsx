@@ -1,16 +1,28 @@
 import { Component } from "react";
-import BarraPrincipal from "../components/navbarCompleta";
-import CardsListagens from "../components/cardsListagens";
-import Botao from "../components/botao";
+import NavbarCompleta from "../components/NavbarCompleta";
+import ListagemProdutosServicos from "../components/ListagemProdutosServicos";
+import FormCadastroProdutoServico from "../components/FormCadastroProdutoServico";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "../styles/produtosServicos.css"
 
 export default class Produtos extends Component {
+    state = {
+        modalVisivel: false,
+    };
+
+    abrirModal = () => {
+        this.setState({ modalVisivel: true });
+    };
+
+    fecharModal = () => {
+        this.setState({ modalVisivel: false });
+    };
+
     render() {
         return (
             <>
-                <BarraPrincipal rota="/"></BarraPrincipal>
+                <NavbarCompleta rota="/"></NavbarCompleta>
                 <div className="container-md">
                     <ul className="nav nav-underline ps-1 mt-2">
                         <li className="nav-item">
@@ -23,22 +35,31 @@ export default class Produtos extends Component {
                     <div id="titulo" className="container-md d-flex justify-content-between align-items-center">
                         <h3>Produtos</h3>
                         <div>
-                            <Botao link="" conteudo="Adicionar Produto"></Botao>
+                            <button id="botao" className="rounded rounded-full" onClick={this.abrirModal}>Cadastrar Produto</button>
                         </div>
                     </div>
                     <ul className="list-group container-lg d-flex flex-column gap-2 my-4">
-                        <CardsListagens nome="Ração Premium Cães 10kg" valor={180} />
-                        <CardsListagens nome="Areia Higiênica 4kg" valor={35} />
-                        <CardsListagens nome="Shampoo Antipulgas" valor={45} />
-                        <CardsListagens nome="Brinquedo Mordedor" valor={25} />
-                        <CardsListagens nome="Coleira Antipulgas" valor={60} />
-                        <CardsListagens nome="Caminha Pequena" valor={120} />
-                        <CardsListagens nome="Arranhador para Gatos" valor={95} />
-                        <CardsListagens nome="Comedouro Duplo Inox" valor={50} />
-                        <CardsListagens nome="Caixa de Transporte Média" valor={140} />
-                        <CardsListagens nome="Petisco Natural 300g" valor={32} />
+                        <ListagemProdutosServicos nome="Ração Premium Cães 10kg" valor={180} />
+                        <ListagemProdutosServicos nome="Areia Higiênica 4kg" valor={35} />
+                        <ListagemProdutosServicos nome="Shampoo Antipulgas" valor={45} />
+                        <ListagemProdutosServicos nome="Brinquedo Mordedor" valor={25} />
+                        <ListagemProdutosServicos nome="Coleira Antipulgas" valor={60} />
+                        <ListagemProdutosServicos nome="Caminha Pequena" valor={120} />
+                        <ListagemProdutosServicos nome="Arranhador para Gatos" valor={95} />
+                        <ListagemProdutosServicos nome="Comedouro Duplo Inox" valor={50} />
+                        <ListagemProdutosServicos nome="Caixa de Transporte Média" valor={140} />
+                        <ListagemProdutosServicos nome="Petisco Natural 300g" valor={32} />
                     </ul>
                 </div>
+                {this.state.modalVisivel && (
+                    <div className="modal-cadastro">
+                        <div className="modal-conteudo">
+                            <span className="botao-fechar-modal" onClick={this.fecharModal}>&times;</span>
+                            <h4 style={{ color: '#F39C12' }}>Cadastro de Produto</h4>
+                            <FormCadastroProdutoServico></FormCadastroProdutoServico>
+                        </div>
+                    </div>
+                )}
             </>
         )
     }

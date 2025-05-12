@@ -4,17 +4,19 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 type props = {
     nome: string,
-    valor?: number
+    raca: string,
+    genero: string
 }
 
-export default class CardsListagens extends Component<props> {
+export default class ListagemPets extends Component<props> {
     render() {
         return (
             <>
                 <li className="list-group-item d-flex justify-content-between align-items-center gap-4 flex-wrap">
                     <div className="d-flex flex-column">
                         <strong>{this.props.nome}</strong>
-                        <small><span className="fw-semibold">Valor: </span>{this.props.valor}</small>
+                        <small><span className="fw-semibold">Tipo/Raça: </span>{this.props.raca}</small>
+                        <small><span className="fw-semibold">Gênero: </span>{this.props.genero}</small>
                     </div>
                     <div className="d-flex gap-4">
                         <a href="/">
