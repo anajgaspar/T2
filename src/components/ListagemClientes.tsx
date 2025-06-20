@@ -1,7 +1,6 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import BotaoLink from "./BotaoLink";
 
 type props = {
     nome: string,
@@ -26,7 +25,9 @@ export default class ListagemClientes extends Component<props> {
                         <a href="/">
                             <img className="img-fluid" src="https://img.icons8.com/?size=100&id=82744&format=png&color=000000" alt="update" width={20}></img>
                         </a>
-                        <BotaoLink link="/cliente-pets" conteudo="Ver Pets"></BotaoLink>
+                        <a href="/cliente/id">
+                            <img className="img-fluid" src="https://img.icons8.com/?size=100&id=85789&format=png&color=000000" alt="profile" width={20}></img>
+                        </a>
                     </div>
                 </li>
             </>

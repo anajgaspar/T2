@@ -11,8 +11,16 @@ export default class FormCadastroCliente extends Component {
                     <input type="text" className="form-control" id="nome"></input>
                 </div>
                 <div className="mb-3">
+                    <label htmlFor="nomeSocial" className="form-label">Nome Social:</label>
+                    <input type="text" className="form-control" id="nomeSocial"></input>
+                </div>
+                <div className="mb-3">
                     <label htmlFor="cpf" className="form-label">CPF:</label>
                     <input type="number" className="form-control" id="cpf"></input>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="rg" className="form-label">RG:</label>
+                    <input type="number" className="form-control" id="rg"></input>
                 </div>
                 <div className="mb-3 row">
                     <div className="col-md-3">
