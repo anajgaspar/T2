@@ -1,10 +1,24 @@
 import { Component } from "react";
 import NavbarCompleta from "../components/NavbarCompleta";
+import ListagemPets from "../components/ListagemPets";
+import FormCadastroPet from "../components/FormCadastroPet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "../styles/perfilCliente.css"
 
 export default class PerfilCliente extends Component {
+    state = {
+        modalVisivel: false,
+    };
+
+    abrirModal = () => {
+        this.setState({ modalVisivel: true });
+    };
+
+    fecharModal = () => {
+        this.setState({ modalVisivel: false });
+    };
+
     render() {
         return (
             <>
@@ -24,22 +38,24 @@ export default class PerfilCliente extends Component {
                                 </ul>
                             </div>
                         </div>
+                        <div className="container-md d-flex justify-content-end align-items-center pb-4">
+                            <button id="botao" className="rounded rounded-full" onClick={this.abrirModal}>Cadastrar Pet</button>
+                        </div>
+                        {this.state.modalVisivel && (
+                            <div className="modal-cadastro">
+                                <div className="modal-conteudo">
+                                    <span className="botao-fechar-modal" onClick={this.fecharModal}>&times;</span>
+                                    <h4 style={{ color: '#F39C12' }}>Cadastro de Pet</h4>
+                                    <FormCadastroPet />
+                                </div>
+                            </div>
+                        )}
                         <div className="mb-4">
                             <div className="card card-body p-4">
                                 <h4 id="enfase" className="card-title">Pets:</h4>
                                 <ul className="list-group list-group-flush mb-3">
-                                    <li className="list-group-item">
-                                        <p className="mb-1"><strong>Nome:</strong> Yuumi</p>
-                                        <p className="mb-1"><strong>Raça:</strong> Siamês</p>
-                                        <p className="mb-1"><strong>Gênero:</strong> Fêmea</p>
-                                        <p className="mb-0"><strong>Tipo:</strong> Gato</p>
-                                    </li>
-                                    <li className="list-group-item">
-                                        <p className="mb-1"><strong>Nome:</strong> Lily</p>
-                                        <p className="mb-1"><strong>Raça:</strong> SRD</p>
-                                        <p className="mb-1"><strong>Gênero:</strong> Fêmea</p>
-                                        <p className="mb-0"><strong>Tipo:</strong> Gato</p>
-                                    </li>
+                                <ListagemPets nome="Yuumi" raca="Siamês" genero="Fêmea" tipo="Gato" ></ListagemPets>
+                                <ListagemPets nome="Lily" raca="SRD" genero="Fêmea" tipo="Gato"></ListagemPets>
                                 </ul>
                             </div>
                         </div>
